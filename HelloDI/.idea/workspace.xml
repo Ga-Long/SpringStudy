@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75b330a1-a22f-4b89-81b1-68a7644ada59" name="Changes" comment="annotation, XML 설정">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/animal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/animal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/conf/animal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/animal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1680713197981" duration="2102000" />
       <workItem from="1680793202643" duration="510000" />
       <workItem from="1680794902764" duration="66000" />
-      <workItem from="1680794972214" duration="1203000" />
+      <workItem from="1680794972214" duration="1842000" />
     </task>
     <task id="LOCAL-00001" summary="annotation, XML 설정">
       <created>1680714222360</created>
