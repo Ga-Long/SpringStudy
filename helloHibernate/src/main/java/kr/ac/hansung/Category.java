@@ -22,4 +22,8 @@ public class Category {
     private int id;
     private String name;
 
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Product> products = new HashSet<>();
+
+
 }

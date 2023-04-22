@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@ToString
+//@ToString
 
 @Entity //entity class -> table
 @Table(name="product")
@@ -22,9 +22,19 @@ public class Product {
     private int price;
     private String Description;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name="category_id")
     private Category category;
 
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", Description='" + Description + '\'' +
+                ", category=" + category.getName() +
+                '}';
+    }
 }

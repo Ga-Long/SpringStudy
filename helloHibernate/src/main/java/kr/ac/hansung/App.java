@@ -26,37 +26,42 @@ public class App
         Category category2 = new Category();
         category1.setName("자동차");
 
-
         Product product1 = new Product();
         product1.setName("노트북1");
         product1.setPrice(2000);
         product1.setDescription("Awesome NoteBook");
-        product1.setCategory(category1);
+        product1.setCategory(category1); //product1 -> category1
+        category1.getProducts().add(product1); //category1 -> product1
 
         Product product2 = new Product();
         product2.setName("노트북2");
         product2.setPrice(3000);
         product2.setDescription("Powerful NoteBook");
         product2.setCategory(category1);
+        category1.getProducts().add(product2);
 
         Product product3 = new Product();
         product3.setName("소나타");
         product3.setPrice(30000);
         product3.setDescription("good ");
         product3.setCategory(category2);
+        category2.getProducts().add(product3);
 
 
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
 
-        System.out.println("helloHibernate : " + "saving products");
-        session.save(product1); //cache에 저장되어있다가
-        session.save(product2);
-        session.save(product3);
-        System.out.println("helloHibernate : " + "saved products");
+//        System.out.println("helloHibernate : " + "saving products");
+//        session.save(product1); //cache에 저장되어있다가
+//        session.save(product2);
+//        session.save(product3);
+//        System.ou t.println("helloHibernate : " + "saved products");
 
+        session.save(category1); // category1 -> product1,2
+        session.save(category2);// category2 -> product3
 
+        //session.delete(category1);
         //Product savedProduct = session.get(Product.class, product1.getId());
         //System.out.println("saved product: " + savedProduct);
 
@@ -64,8 +69,11 @@ public class App
         List<Product> products = aQuery.getResultList(); //조회해서 리스트 가져옴
         System.out.println(products);
 
+
         tx.commit(); // 비로소 이때 db에 insert
         session.close();
+
+
         sessionFactory.close();
 
 
