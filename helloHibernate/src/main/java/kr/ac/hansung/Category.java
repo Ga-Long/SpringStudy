@@ -22,6 +22,7 @@ public class Category {
     private int id;
     private String name;
 
+    //category -> 1000 products => Lazy 설정
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Product> products = new HashSet<>();
 

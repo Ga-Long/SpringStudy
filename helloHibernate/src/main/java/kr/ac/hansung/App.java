@@ -7,7 +7,9 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
+import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Hello world!
@@ -58,21 +60,33 @@ public class App
 //        session.save(product3);
 //        System.ou t.println("helloHibernate : " + "saved products");
 
-        session.save(category1); // category1 -> product1,2
-        session.save(category2);// category2 -> product3
+        Serializable cid1 = session.save(category1); // category1 -> product1,2
+        Serializable cid2 =session.save(category2);// category2 -> product3
 
         //session.delete(category1);
         //Product savedProduct = session.get(Product.class, product1.getId());
         //System.out.println("saved product: " + savedProduct);
 
-        Query<Product> aQuery = session.createQuery("from Product order by name", Product.class); //HQL
-        List<Product> products = aQuery.getResultList(); //조회해서 리스트 가져옴
-        System.out.println(products);
+//        Query<Product> aQuery = session.createQuery("from Product order by name", Product.class); //HQL
+//        List<Product> products = aQuery.getResultList(); //조회해서 리스트 가져옴
+//        System.out.println(products);
 
 
         tx.commit(); // 비로소 이때 db에 insert
         session.close();
 
+        Session session2 = sessionFactory.openSession();
+        Transaction tx2 = session2.beginTransaction();
+
+        System.out.println("helloHibernate : " + "getting a Category");
+        Category aCategory = session2.get(Category.class, cid1); //category를 읽었는데
+
+        System.out.println("helloHibernate : " + "getting Products");
+        Set<Product> products = aCategory.getProducts(); //여기에서 product를 읽을것이냐?
+
+        System.out.println("helloHibernate : " + "printing products");
+        for(Product p : products)
+            System.out.println(p.getName());
 
         sessionFactory.close();
 
