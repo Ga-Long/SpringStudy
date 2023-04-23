@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="75b330a1-a22f-4b89-81b1-68a7644ada59" name="Changes" comment="annotation, XML 설정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/animal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/animal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloSpringMVC/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloSpringMVC/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloSpringMVC/src/main/java/kr/ac/hansung/model/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloSpringMVC/src/main/java/kr/ac/hansung/model/Offer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +102,7 @@
       <workItem from="1680794902764" duration="66000" />
       <workItem from="1680794972214" duration="1842000" />
       <workItem from="1680978268207" duration="988000" />
+      <workItem from="1682267607447" duration="1131000" />
     </task>
     <task id="LOCAL-00001" summary="annotation, XML 설정">
       <created>1680714222360</created>

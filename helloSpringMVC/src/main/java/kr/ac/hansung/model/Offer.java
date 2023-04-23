@@ -24,7 +24,7 @@ public class Offer {
     @Column(name="offer_id")
     private int id;
 
-    @Size(min=2, max=100, message = "Name must be between 2 and 100 chars")
+    @Size(min =2, max=100, message = "Name must be between 2 and 100 chars")
     private String name;
 
     @Email(message="Please provide a valid email address")

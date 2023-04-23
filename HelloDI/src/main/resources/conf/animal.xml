@@ -6,12 +6,12 @@
 
     <bean id="catId" class="kr.ac.hansung.cse.animals.Cat">
         <qualifier value="qf_cat"/>
-        <property name="myName" value="poodle"/>
+        <property name="myName" value="bella"/>
     </bean>
 
     <bean id="dogId" class="kr.ac.hansung.cse.animals.Dog">
         <qualifier value="qf_dog"/>
-        <property name="myName" value="bella"/>
+        <property name="myName" value="poodle"/>
     </bean>
 
     <bean id="petOwnerId" class="kr.ac.hansung.cse.animals.PetOwner">
