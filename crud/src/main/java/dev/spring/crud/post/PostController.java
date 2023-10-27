@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @ResponseBody
-@RequestMapping("post")
-public class PostController {
+//@RequestMapping("post")
+public class PostController { // 사용자에게 view 제공
     private static final Logger logger = LoggerFactory.getLogger(PostController.class);
     private final List<PostDto> postList;
 
